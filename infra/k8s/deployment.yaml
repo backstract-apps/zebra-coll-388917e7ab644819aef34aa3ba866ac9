@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: zebra-coll-388917e7ab644819aef34aa3ba866ac9-depl
+  labels:
+    app: zebra-coll-388917e7ab644819aef34aa3ba866ac9
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: zebra-coll-388917e7ab644819aef34aa3ba866ac9
+  template:
+    metadata:
+      labels:
+        app: zebra-coll-388917e7ab644819aef34aa3ba866ac9
+    spec:
+      containers:
+        - name: zebra-coll-388917e7ab644819aef34aa3ba866ac9
+          image: 216084506783.dkr.ecr.ap-south-1.amazonaws.com/backstract_apps:zebra-coll-388917e7ab644819aef34aa3ba866ac9
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 9017

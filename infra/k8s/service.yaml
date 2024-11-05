@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: zebra-coll-388917e7ab644819aef34aa3ba866ac9-srv
+spec:
+  selector:
+    app: zebra-coll-388917e7ab644819aef34aa3ba866ac9
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 9017
+  type: LoadBalancer
